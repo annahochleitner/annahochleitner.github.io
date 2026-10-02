@@ -1,23 +1,25 @@
 :root {
-  --bg: #faf7f2;
+  --bg: #faf6f1;
   --surface: #ffffff;
-  --text: #2b2622;
-  --muted: #7a7068;
-  --border: #e6dfd5;
-  --accent: #a4492f;
-  --accent-soft: #f3e4dc;
+  --text: #262733;
+  --muted: #6e6c7e;
+  --border: #e6dfdb;
+  --accent: #bf5a1e;
+  --heading: #3a3c5a;
+  --accent-soft: #fbe7d6;
   --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
   --sans: "Source Sans 3", system-ui, sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #1a1714;
-    --surface: #231f1b;
-    --text: #ebe5dd;
-    --muted: #a59b90;
-    --border: #38322c;
-    --accent: #e39a7f;
-    --accent-soft: #3a2a23;
+    --bg: #16171f;
+    --surface: #1f212c;
+    --text: #ece8e3;
+    --muted: #a3a1b5;
+    --border: #313447;
+    --accent: #f2a35e;
+    --heading: #d9d6ee;
+    --accent-soft: #3b2c22;
   }
 }
 
@@ -160,8 +162,8 @@ footer { border-top: 1px solid var(--border); padding: 1.5rem 0 0; color: var(--
 
 /* Banner across the top (the fjord sunset from the original site) */
 .banner {
-  height: clamp(180px, 30vw, 340px);
-  background: #2b2622 url("banner.jpg") center 62% / cover no-repeat;
+  height: clamp(130px, 21vw, 230px);
+  background: #262733 url("banner.jpg") center 64% / cover no-repeat;
 }
 
 /* Role line left-aligned under the centred photo and name */
@@ -169,3 +171,6 @@ footer { border-top: 1px solid var(--border); padding: 1.5rem 0 0; color: var(--
 @media (max-width: 860px) {
   .identity .role { align-self: center; text-align: center; }
 }
+
+/* Headings in the dusk blue of the banner's mountains and sky */
+.sidebar h1, h2, .paper h4, .courses .name { color: var(--heading); }
