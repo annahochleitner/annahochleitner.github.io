@@ -1,4 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="12" fill="#bf5a1e"/>
-  <text x="32" y="43" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#ffffff">AH</text>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4a4d73"/>
+      <stop offset="0.55" stop-color="#e98a4a"/>
+      <stop offset="1" stop-color="#f6c06a"/>
+    </linearGradient>
+    <clipPath id="round"><circle cx="32" cy="32" r="32"/></clipPath>
+  </defs>
+  <g clip-path="url(#round)">
+    <rect width="64" height="42" fill="url(#sky)"/>
+    <circle cx="40" cy="38" r="9" fill="#ffd98a"/>
+    <path d="M0 40 L0 22 L10 14 L22 24 L30 40 Z" fill="#2c2e47"/>
+    <rect y="40" width="64" height="24" fill="#3a3c5a"/>
+    <rect x="33" y="44" width="14" height="2.5" rx="1.25" fill="#f2a35e"/>
+    <rect x="36" y="50" width="8" height="2.5" rx="1.25" fill="#f2a35e" opacity="0.7"/>
+  </g>
 </svg>
