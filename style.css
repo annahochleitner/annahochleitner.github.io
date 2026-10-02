@@ -163,7 +163,7 @@ footer { border-top: 1px solid var(--border); padding: 1.5rem 0 0; color: var(--
 /* Banner across the top (the fjord sunset from the original site) */
 .banner {
   height: clamp(130px, 21vw, 230px);
-  background: #262733 url("banner.jpg") center 64% / cover no-repeat;
+  background: #262733 url("banner.jpg") center 42% / cover no-repeat;
 }
 
 /* Role line left-aligned under the centred photo and name */
