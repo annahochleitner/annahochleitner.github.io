@@ -253,3 +253,12 @@ section { scroll-margin-top: 5rem; }
   text-decoration-thickness: 1px; text-underline-offset: 3px;
 }
 .authors a.co:hover { color: var(--accent); text-decoration-color: currentColor; }
+
+/* Embedded CV */
+.cv-actions { display: flex; flex-wrap: wrap; gap: 0.4rem 1.5rem; font-size: 0.95rem; font-weight: 600; margin-bottom: 1rem; }
+.cv-viewer {
+  display: block; width: 100%; height: min(85vh, 1100px); min-height: 520px;
+  border: 1px solid var(--border); border-radius: 6px; background: var(--surface);
+}
+.cv-fallback { padding: 2rem; text-align: center; color: var(--muted); }
+#cv { padding-bottom: 3rem; }
