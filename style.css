@@ -262,3 +262,9 @@ section { scroll-margin-top: 5rem; }
 }
 .cv-fallback { padding: 2rem; text-align: center; color: var(--muted); }
 #cv { padding-bottom: 3rem; }
+
+/* Justified body text (about, abstracts); hyphenation keeps word gaps even */
+.about p, .abstract, .paper details p {
+  text-align: justify; text-justify: inter-word;
+  hyphens: auto; -webkit-hyphens: auto;
+}
