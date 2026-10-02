@@ -174,3 +174,27 @@ footer { border-top: 1px solid var(--border); padding: 1.5rem 0 0; color: var(--
 
 /* Headings in the dusk blue of the banner's mountains and sky */
 .sidebar h1, h2, .paper h4, .courses .name { color: var(--heading); }
+
+/* Section links: a row at the top of the content column, visible on load and sticky while scrolling */
+.tabs {
+  position: sticky; top: 0; z-index: 5;
+  display: flex; flex-wrap: wrap; gap: 0.25rem 2rem;
+  padding: 1rem 0; margin-bottom: 2.5rem;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+.tabs a {
+  color: var(--heading); font-weight: 600; font-size: 1rem;
+  padding-bottom: 0.15rem; border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+.tabs a:hover, .tabs a.active { color: var(--accent); border-bottom-color: var(--accent); text-decoration: none; }
+main { padding-top: 1.5rem; }
+section { scroll-margin-top: 5rem; }
+.sidebar { padding-top: 2.75rem; }
+.contact { margin-top: 2rem; }
+@media (max-width: 860px) {
+  .tabs { justify-content: center; margin-bottom: 2rem; }
+  main { padding-top: 0; }
+}

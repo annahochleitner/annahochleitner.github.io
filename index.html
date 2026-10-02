@@ -21,13 +21,6 @@
       <p class="role">Postdoctoral researcher<br>FAIR, Norwegian School of Economics</p>
       </div>
 
-      <nav>
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#teaching">Teaching</a>
-        <a href="https://drive.google.com/file/d/1tmCJC5_fVZbZdGc_20Mrm8_NXfIk3iBV/view" target="_blank" rel="noopener">CV ↗</a>
-      </nav>
-
       <div class="contact">
         <p><a href="mailto:anna.hochleitner@snf.no">anna.hochleitner@snf.no</a></p>
         <p>NHH Norwegian School of Economics<br>FAIR, E212<br>Helleveien 30, 5045 Bergen, Norway</p>
@@ -35,6 +28,13 @@
     </aside>
 
     <main>
+      <nav class="tabs" aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#teaching">Teaching</a>
+        <a href="https://drive.google.com/file/d/1tmCJC5_fVZbZdGc_20Mrm8_NXfIk3iBV/view" target="_blank" rel="noopener">CV ↗</a>
+      </nav>
+
       <section id="about" class="about">
         <h2>About</h2>
         <p>
@@ -161,7 +161,7 @@
   <script>
     // Highlight the sidebar link of the section currently in view
     (function () {
-      var links = document.querySelectorAll('.sidebar nav a[href^="#"]');
+      var links = document.querySelectorAll('.tabs a[href^="#"]');
       if (!("IntersectionObserver" in window)) return;
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
