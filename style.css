@@ -76,7 +76,6 @@ h2::after { content: ""; display: block; width: 2.5rem; height: 3px; background:
 
 .about p { font-family: var(--serif); font-size: 1.2rem; line-height: 1.65; }
 .about p + p { margin-top: 1.1rem; }
-.about .lead-in { color: var(--accent); font-style: italic; }
 
 /* Group labels: Publications / Working papers / Work in progress */
 h3 {
@@ -150,4 +149,11 @@ footer { border-top: 1px solid var(--border); padding: 1.5rem 0 0; color: var(--
   main { padding-top: 2.5rem; }
   section { padding-bottom: 3rem; }
   .about p { font-size: 1.1rem; }
+}
+
+/* Photo: plain rectangle, centred above the name */
+.identity { display: flex; flex-direction: column; align-items: center; text-align: center; width: fit-content; }
+.photo {
+  width: 190px; height: 238px; border-radius: 4px;
+  border: 0; box-shadow: none; object-position: center 15%;
 }
