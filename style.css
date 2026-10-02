@@ -157,3 +157,15 @@ footer { border-top: 1px solid var(--border); padding: 1.5rem 0 0; color: var(--
   width: 190px; height: 238px; border-radius: 4px;
   border: 0; box-shadow: none; object-position: center 15%;
 }
+
+/* Banner across the top (the fjord sunset from the original site) */
+.banner {
+  height: clamp(180px, 30vw, 340px);
+  background: #2b2622 url("banner.jpg") center 62% / cover no-repeat;
+}
+
+/* Role line left-aligned under the centred photo and name */
+.identity .role { align-self: flex-start; text-align: left; }
+@media (max-width: 860px) {
+  .identity .role { align-self: center; text-align: center; }
+}
