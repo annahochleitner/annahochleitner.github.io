@@ -32,10 +32,9 @@ body {
   background: var(--bg);
   color: var(--text);
 }
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; text-underline-offset: 3px; }
-a.quiet { color: inherit; text-decoration: underline; text-decoration-color: var(--border); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-a.quiet:hover { text-decoration-color: var(--accent); }
+/* Links: quiet by default (text colour, thin underline), accent only on hover */
+a { color: inherit; text-decoration: underline; text-decoration-color: var(--border); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { text-decoration-color: var(--accent); }
 
 /* Two-column layout: sidebar + content */
 .layout {
@@ -61,12 +60,11 @@ a.quiet:hover { text-decoration-color: var(--accent); }
 .role { color: var(--muted); font-size: 0.95rem; line-height: 1.45; margin-top: 0.6rem; }
 .sidebar nav { display: flex; flex-direction: column; gap: 0.15rem; margin-top: 2.25rem; }
 .sidebar nav a {
-  color: var(--text); font-size: 1rem; padding: 0.3rem 0 0.3rem 0.9rem;
+  text-decoration: none; color: var(--text); font-size: 1rem; padding: 0.3rem 0 0.3rem 0.9rem;
   border-left: 2px solid var(--border); transition: border-color 0.15s, color 0.15s;
 }
 .sidebar nav a:hover, .sidebar nav a.active { color: var(--accent); border-left-color: var(--accent); text-decoration: none; }
 .contact { margin-top: auto; padding-top: 2rem; font-size: 0.88rem; color: var(--muted); line-height: 1.55; }
-.contact a { font-weight: 600; }
 .contact p + p { margin-top: 0.6rem; }
 
 /* Content */
@@ -97,9 +95,8 @@ h3 .count { color: var(--muted); font-weight: 400; letter-spacing: 0; }
 .paper h4 { font-family: var(--serif); font-size: 1.2rem; font-weight: 600; line-height: 1.35; }
 .paper .authors { color: var(--muted); font-size: 0.95rem; margin-top: 0.2rem; }
 .paper .meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.9rem; margin-top: 0.6rem; font-size: 0.88rem; }
-.tag { color: var(--text); font-weight: 600; }
+.tag { color: var(--text); }
 .tag.plain { color: var(--muted); font-weight: 400; font-style: italic; }
-.paper .meta a { font-weight: 600; }
 
 /* Abstract toggle */
 .paper details { margin-top: 0.6rem; }
@@ -132,7 +129,7 @@ h3 .count { color: var(--muted); font-weight: 400; letter-spacing: 0; }
 .courses li:last-child { border-bottom: none; }
 .courses .name { font-family: var(--serif); font-size: 1.08rem; font-weight: 600; }
 .courses .detail { grid-column: 1; color: var(--muted); font-size: 0.9rem; }
-.courses .score { grid-column: 2; grid-row: 1; font-size: 0.88rem; font-weight: 600; color: var(--accent); white-space: nowrap; }
+.courses .score { grid-column: 2; grid-row: 1; font-size: 0.88rem; font-weight: 600; color: var(--text); white-space: nowrap; }
 .courses .score.none { color: var(--muted); font-weight: 400; font-style: italic; }
 
 footer { border-top: 1px solid var(--border); padding: 1.5rem 0 0; color: var(--muted); font-size: 0.85rem; }
@@ -184,7 +181,7 @@ footer { border-top: 1px solid var(--border); padding: 1.5rem 0 0; color: var(--
   border-bottom: 1px solid var(--border);
 }
 .tabs a {
-  color: var(--heading); font-weight: 600; font-size: 1rem;
+  text-decoration: none; color: var(--heading); font-weight: 600; font-size: 1rem;
   padding-bottom: 0.15rem; border-bottom: 2px solid transparent;
   transition: color 0.15s, border-color 0.15s;
 }
@@ -208,7 +205,6 @@ section { scroll-margin-top: 5rem; }
 }
 .feature .authors { color: var(--muted); font-size: 0.95rem; margin-top: 0.3rem; }
 .feature .meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.9rem; margin-top: 0.6rem; font-size: 0.88rem; }
-.feature .meta a { font-weight: 600; }
 .feature figure {
   margin: 1.5rem 0 1.25rem; padding: 1rem;
   background: #fff; border: 1px solid var(--border); border-radius: 6px;
@@ -242,19 +238,12 @@ section { scroll-margin-top: 5rem; }
 }
 .more {
   margin-top: 0.5rem; padding: 0; border: 0; background: none; cursor: pointer;
-  font: inherit; font-size: 0.88rem; font-weight: 600; color: var(--accent);
+  font: inherit; font-size: 0.88rem; font-weight: 600; color: var(--muted);
 }
-.more:hover { text-decoration: underline; text-underline-offset: 3px; }
-
-/* Coauthor links: quiet, underlined, accent on hover */
-.authors a.co {
-  color: inherit; text-decoration: underline; text-decoration-color: var(--border);
-  text-decoration-thickness: 1px; text-underline-offset: 3px;
-}
-.authors a.co:hover { color: var(--accent); text-decoration-color: currentColor; }
+.more:hover { color: var(--accent); }
 
 /* Embedded CV */
-.cv-actions { display: flex; flex-wrap: wrap; gap: 0.4rem 1.5rem; font-size: 0.95rem; font-weight: 600; margin-bottom: 1rem; }
+.cv-actions { display: flex; flex-wrap: wrap; gap: 0.4rem 1.5rem; font-size: 0.95rem; margin-bottom: 1rem; }
 .cv-viewer {
   display: block; width: 100%; height: min(85vh, 1100px); min-height: 520px;
   border: 1px solid var(--border); border-radius: 6px; background: var(--surface);
