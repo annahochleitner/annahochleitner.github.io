@@ -58,6 +58,7 @@ a:hover { text-decoration-color: var(--accent); }
   letter-spacing: -0.01em; margin-top: 1.5rem;
 }
 .role { color: var(--muted); font-size: 0.95rem; line-height: 1.45; margin-top: 0.6rem; }
+.identity h1:first-child { margin-top: 0; }
 .sidebar nav { display: flex; flex-direction: column; gap: 0.15rem; margin-top: 2.25rem; }
 .sidebar nav a {
   text-decoration: none; color: var(--text); font-size: 1rem; padding: 0.3rem 0 0.3rem 0.9rem;
