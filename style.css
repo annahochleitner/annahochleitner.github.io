@@ -1,5 +1,5 @@
 :root {
-  --bg: #faf6f1;
+  --bg: #ffffff;
   --surface: #ffffff;
   --text: #262733;
   --muted: #6e6c7e;
@@ -97,11 +97,8 @@ h3 .count { color: var(--muted); font-weight: 400; letter-spacing: 0; }
 .paper h4 { font-family: var(--serif); font-size: 1.2rem; font-weight: 600; line-height: 1.35; }
 .paper .authors { color: var(--muted); font-size: 0.95rem; margin-top: 0.2rem; }
 .paper .meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.9rem; margin-top: 0.6rem; font-size: 0.88rem; }
-.tag {
-  background: var(--accent-soft); color: var(--accent);
-  padding: 0.12rem 0.6rem; border-radius: 4px; font-weight: 600;
-}
-.tag.plain { background: transparent; color: var(--muted); padding-left: 0; font-weight: 400; font-style: italic; }
+.tag { color: var(--text); font-weight: 600; }
+.tag.plain { color: var(--muted); font-weight: 400; font-style: italic; }
 .paper .meta a { font-weight: 600; }
 
 /* Abstract toggle */
