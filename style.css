@@ -43,6 +43,9 @@ a:hover { text-decoration-color: var(--accent); }
 }
 /* Subpages: no sidebar, one column at a comfortable reading width */
 .layout.single { grid-template-columns: minmax(0, 1fr); max-width: 820px; }
+.site-name { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; color: var(--heading); margin-bottom: 0.75rem; }
+.site-name a { text-decoration: none; }
+.site-name a:hover { color: var(--accent); }
 
 /* Sidebar */
 .sidebar {
