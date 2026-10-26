@@ -1,6 +1,6 @@
 # Anna Hochleitner – personal website
 
-Plain HTML/CSS, with no build step. Edit `index.html` and push to `main`, and GitHub Pages redeploys automatically.
+Plain HTML/CSS, with no build step. Edit `index.html` (About, Selected work), `research.html` or `teaching.html` and push to `main`, and GitHub Pages redeploys automatically.
 
 To update the CV, replace `CV_AnnaHochleitner.pdf` with the new file (keep the name) and push.
 
